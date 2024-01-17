@@ -31,7 +31,7 @@ class PrimeNumberGenerator
      * @param int $number The number to check.
      * @return bool True if the number is prime, false otherwise.
      */
-    private function isPrime(int $number): bool
+    public function isPrime(int $number): bool
     {
         if ($number <= 1) {
             return false;

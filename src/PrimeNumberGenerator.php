@@ -1,6 +1,6 @@
 <?php
 
-namespace MyPrimeApp;
+namespace MyApp;
 
 class PrimeNumberGenerator
 {

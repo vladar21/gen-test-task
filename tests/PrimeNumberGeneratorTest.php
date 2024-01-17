@@ -7,6 +7,9 @@ use PHPUnit\Framework\TestCase;
 
 class PrimeNumberGeneratorTest extends TestCase
 {
+    /**
+     * Test the generation of prime numbers using the generatePrimes method.
+     */
     public function testGeneratePrimes(): void
     {
         $generator = new PrimeNumberGenerator();
@@ -15,6 +18,9 @@ class PrimeNumberGeneratorTest extends TestCase
         $this->assertEquals([2, 3, 5, 7, 11], $primes);
     }
 
+    /**
+     * Test the isPrime method with a prime or a non-prime number.
+     */
     public function testIsPrime(): void
     {
         $generator = new PrimeNumberGenerator();

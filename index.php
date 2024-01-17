@@ -4,14 +4,24 @@ require 'vendor/autoload.php'; // Include Composer's autoloader
 
 use MyApp\PrimeNumberGenerator;
 
-// Prompt the user for input
-echo "Enter a whole number (N): ";
-$n = readline();
+while (true) {
+    // Prompt the user for input
+    echo "Enter a whole number (N) or 'exit' to quit: ";
+    $input = readline();
 
-// Validate user input
-if (!is_numeric($n) || $n < 1) {
-    echo "Invalid input. Please enter a positive whole number (N).\n";
-    exit(1);
+    // Check if the user wants to exit
+    if (strtolower($input) === 'exit') {
+        echo "Exiting the program.\n";
+        exit(0);
+    }
+
+    // Validate user input
+    if (!is_numeric($input) || $input < 1) {
+        echo "Invalid input. Please enter a positive whole number (N) or 'exit' to quit.\n";
+    } else {
+        $n = (int)$input; // Convert valid input to integer
+        break; // Exit the loop with valid input
+    }
 }
 
 // Create a PrimeNumberGenerator instance
